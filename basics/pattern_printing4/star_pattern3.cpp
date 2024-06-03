@@ -1,11 +1,11 @@
-// ********
-// ***  ***
-// **    **
-// *      *
-// *      *
-// **    **
-// ***  ***
-// ********
+// * * * * * * * *
+// * * *     * * *
+// * *         * *
+// *             *
+// *             *
+// * *         * *
+// * * *     * * *
+// * * * * * * * *
 
 #include <iostream>
 using namespace std;
@@ -20,16 +20,16 @@ int main()
     {
         for (int j = 1; j <= changing_rows; j++)
         {
-            cout << "*";
+            cout << "* ";
         }
         int no_of_spaces = row * 2 - (changing_rows * 2);
         for (int k = 1; k <= no_of_spaces; k++)
         {
-            cout << " ";
+            cout << "  ";
         }
         for (int l = 1; l <= changing_rows; l++)
         {
-            cout << "*";
+            cout << "* ";
         }
         changing_rows--;
         cout << endl;
@@ -41,16 +41,16 @@ int main()
         {
             for (int j = 1; j <= changing_rows1; j++)
             {
-                cout << "*";
+                cout << "* ";
             }
             int no_of_spaces = row * 2 - (changing_rows1 * 2);
             for (int k = 1; k <= no_of_spaces; k++)
             {
-                cout << " ";
+                cout << "  ";
             }
             for (int l = 1; l <= changing_rows1; l++)
             {
-                cout << "*";
+                cout << "* ";
             }
             changing_rows1++;
             cout << endl;
