@@ -16,7 +16,6 @@ int main()
     cin >> row;
     for (int i = 1; i <= row; i++)
     {
-        int no_of_gaps = row - i;
         for (int j = 1; j <= row - i; j++)
         {
             cout << " ";
@@ -29,7 +28,6 @@ int main()
     }
     for (int i = row - 1; i >= 1; i--)
     {
-        int no_of_gaps = row - i;
         for (int j = 1; j <= row - i; j++)
         {
             cout << " ";
