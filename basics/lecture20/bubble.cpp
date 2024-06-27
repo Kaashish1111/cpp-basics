@@ -18,19 +18,20 @@ int main()
         cout << arr[i] << " ";
     }
 
-    for (int i = 0; i <= n - 1; i++)
+    for (int i = 0; i < n - 1; i++)
     {
         bool swapped = 0;
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
             if (arr[j] > arr[j + 1])
             {
                 swap(arr[j], arr[j + 1]);
                 swapped = 1;
             }
-            if (swapped == 0){
-                break;
-            }
+        }
+        if (swapped == 0)
+        {
+            break;
         }
     }
     cout << "\nArray after sorting is : ";
