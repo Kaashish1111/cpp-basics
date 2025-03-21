@@ -1,35 +1,29 @@
 #include <iostream>
 using namespace std;
 
-void printPrimes(int n) {
-    bool* prime = new bool[n + 1];
-    for (int i = 0; i <= n; i++) {
-        prime[i] = true;
-    }
-
-    for (int p = 2; p * p <= n; p++) {
-        if (prime[p]) {
-            for (int i = p * p; i <= n; i += p) {
-                prime[i] = false;
-            }
+bool isprime(int n)
+{
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
         }
     }
-
-    cout << "Prime numbers till " << n << " are: ";
-    for (int p = 2; p <= n; p++) {
-        if (prime[p]) {
-            cout << p << " ";
-        }
-    }
-    cout << endl;
-
-    delete[] prime; // Don't forget to free the memory
+    return true;
 }
 
-int main() {
-    int n;
-    cout << "Enter a number: ";
-    cin >> n;
-    printPrimes(n);
+int main()
+{
+    int num;
+    cin >> num;
+    int count = 0; // Move declaration outside the loop
+    for (int i = 2; i <= num; i++)
+    {
+        if (isprime(i))
+        {
+            cout << i << endl;
+        }
+    }
     return 0;
 }
