@@ -12,7 +12,7 @@ void decimalToHexadecimal(int num) {
             hexDigit = remainder - 10 + 'A';
         }
 
-        hex = hexDigit + hex; 
+        hex = hexDigit + hex;
         num /= 16;
     }
 
